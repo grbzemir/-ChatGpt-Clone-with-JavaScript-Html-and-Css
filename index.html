@@ -10,7 +10,7 @@
             src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
     </head>
     <body>
-        <div class="app">
+        <div class="app light">
             <aside>
                 <nav>
                     <div class="nav-top">
@@ -29,9 +29,11 @@
                                 </div>
                                 <div>
                                     <iconify-icon icon="bi:trash"
-                                        class="icon"></iconify-icon>
+                                        class="icon"
+                                        onclick="removeChat(this)"></iconify-icon>
                                     <iconify-icon icon="bi:pen"
-                                        class="icon"></iconify-icon>
+                                        class="icon"
+                                        onclick="updateChatTitle(this)"></iconify-icon>
                                 </div>
                             </li>
                             <li>
@@ -43,23 +45,29 @@
                                 </div>
                                 <div>
                                     <iconify-icon icon="bi:trash"
-                                        class="icon"></iconify-icon>
+                                        class="icon"
+                                        onclick="removeChat(this)"></iconify-icon>
                                     <iconify-icon icon="bi:pen"
-                                        class="icon"></iconify-icon>
+                                        class="icon"
+                                        onclick="updateChatTitle(this)"></iconify-icon>
                                 </div>
                             </li>
                         </ul>
                     </div>
 
                     <ul>
-                        <li><iconify-icon icon="bi:trash"
+                        <li id="Delete">
+                            <iconify-icon icon="bi:trash"
                                 class="icon"></iconify-icon> Clear
                             Conversations</li>
-                        <li><iconify-icon icon="bi:gear"
+                        <li>
+                            <iconify-icon icon="bi:gear"
                                 class="icon"></iconify-icon> Settings</li>
-                        <li><iconify-icon icon="bi:brightness-high"
+                        <li id="mode">
+                            <iconify-icon icon="bi:brightness-high"
                                 class="icon"></iconify-icon> Light Mode</li>
-                        <li><iconify-icon icon="bi:globe-americas"
+                        <li>
+                            <iconify-icon icon="bi:globe-americas"
                                 class="icon"></iconify-icon> English</li>
                     </ul>
                 </nav>

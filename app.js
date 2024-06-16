@@ -60,26 +60,51 @@ const removeChat = (el) => el.parentElement.parentElement.remove();
 const updateChatTitle = (el) => el.parentElement.previousElementSibling.querySelector('.chat-title').focus();
 
 async function getAnswer() {
+    const url = 'https://api.openai.com/v1/engines/gpt-3.5-turbo/completions'; // Replace with the correct OpenAI API endpoint
+    const OPENAI_API_KEY = 'your_openai_api_key_here'; // Replace with your actual OpenAI API key
+
+    const options = {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${OPENAI_API_KEY}`
+        },
+        body: JSON.stringify({
+            model: "gpt-3.5-turbo",
+            messages: [{ role: "user", content: input.value }],
+            temperature: 0.7 // Adjust temperature as needed
+        })
+    };
+
     try {
-        const id = generateId();
-        const question = input.value;
-        app.querySelector('.hints p').textContent = question;
+        if (input.value.length >= 3) { // Corrected typo: `lenght` to `length`
+            const id = generateId();
+            const question = input.value;
+            app.querySelector('.hints p').textContent = question;
 
-        qna.innerHTML += createChat(question, id);
+            qna.innerHTML += createChat(question, id);
 
-        const p = document.getElementById(id);
+            const p = document.getElementById(id);
 
-        setTimeout(() => {
-            p.innerHTML = '';
-            input.value = '';
-            const msg = "It's all about developing websites using different web technologies.";
+            const res = await fetch(url, options);
 
-            typeWriter(p, msg);
-        }, 2000);
+            if (res.ok) {
+                p.innerHTML = 'Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...';
+                input.value = "";
+                const data = await res.json();
+                const msg = data.choices[0].message.content;
+
+                typeWriter(p, msg);
+            } else {
+                throw new Error(`HTTP error! Status: ${res.status}`);
+            }
+        }
     } catch (err) {
         console.error(err);
     }
 }
+
+
 
 function createChat(question, id) {
     return `<div class="result">

@@ -284,3 +284,10 @@ main .qna .result div.answer {
     width: auto;
 
 }
+
+main .qna .result div.answer p {
+
+
+    white-space: break-spaces;
+
+}

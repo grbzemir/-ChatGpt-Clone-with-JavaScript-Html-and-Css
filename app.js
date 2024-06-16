@@ -12,7 +12,7 @@ result = document.querySelector('.qna');
 input = document.querySelector('.request input');
 send = document.querySelector('#send'),
 
-    OPENAI_API_KEY = 'sk-proj-6DlnSCLZC0tErla1PNp7T3BlbkFJRxNxJvjKSXfyEXpLrhW6',
+    // OPENAI_API_KEY = 'sk-proj-6DlnSCLZC0tErla1PNp7T3BlbkFJRxNxJvjKSXfyEXpLrhW6',
     url = "https://api.openai.com/v1/chat/completions";
 
 
@@ -60,8 +60,8 @@ const removeChat = (el) => el.parentElement.parentElement.remove();
 const updateChatTitle = (el) => el.parentElement.previousElementSibling.querySelector('.chat-title').focus();
 
 async function getAnswer() {
-    const url = 'https://api.openai.com/v1/engines/gpt-3.5-turbo/completions'; // Replace with the correct OpenAI API endpoint
-    const OPENAI_API_KEY = 'your_openai_api_key_here'; // Replace with your actual OpenAI API key
+    // const url = 'https://api.openai.com/v1/engines/gpt-3.5-turbo/completions'; // Replace with the correct OpenAI API endpoint
+    // const OPENAI_API_KEY = 'your_openai_api_key_here'; // Replace with your actual OpenAI API key
 
     const options = {
         method: 'POST',

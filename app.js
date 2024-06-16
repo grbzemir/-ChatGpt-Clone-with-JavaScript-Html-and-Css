@@ -89,7 +89,7 @@ async function getAnswer() {
             const res = await fetch(url, options);
 
             if (res.ok) {
-                p.innerHTML = 'Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...';
+                p.innerHTML = 'Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...Message sent! Waiting for response...';
                 input.value = "";
                 const data = await res.json();
                 const msg = data.choices[0].message.content;

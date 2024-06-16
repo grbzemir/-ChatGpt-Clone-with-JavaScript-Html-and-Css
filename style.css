@@ -90,7 +90,7 @@ button {
 
 [contenteditable] {
     outline: none;
-    border-bottom: .1rem solid #fff;
+    border-bottom: .1rem solid transparent
 }
 
 button:hover {
@@ -231,6 +231,7 @@ main .qna .result div.question {
 
 main .qna .result div.answer {
     background: #fff1;
+    align-items: flex-start;
     border-radius: 0 0 1rem 1rem;
     box-shadow: var(--box-shadow);
 }
@@ -274,4 +275,19 @@ main .qna .result div.answer {
 
     padding: 1rem 2rem;
     background-color: #00ad81;
+}
+
+
+.loading {
+
+    height: 3.2rem;
+    width: auto;
+
+}
+
+main .qna .result div.answer p {
+
+
+    white-space: break-spaces;
+
 }

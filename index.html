@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ChatGPT Clone</title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="app.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+    </head>
+    <body>
+        <div class="app">
+            <aside>
+                <nav>
+                    <div class="nav-top">
+                        <button id="add-chat">
+                            <iconify-icon icon="bi:plus-lg"></iconify-icon>New
+                            Chat
+                        </button>
+
+                        <ul class="chats">
+                            <li>
+                                <div>
+                                    <iconify-icon icon="bi:chat-left-text"
+                                        class="icon"></iconify-icon>
+                                    <span class="chat-title" contenteditable>New
+                                        Chat</span>
+                                </div>
+                                <div>
+                                    <iconify-icon icon="bi:trash"
+                                        class="icon"></iconify-icon>
+                                    <iconify-icon icon="bi:pen"
+                                        class="icon"></iconify-icon>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <iconify-icon icon="bi:chat-left-text"
+                                        class="icon"></iconify-icon>
+                                    <span class="chat-title" contenteditable>New
+                                        Chat</span>
+                                </div>
+                                <div>
+                                    <iconify-icon icon="bi:trash"
+                                        class="icon"></iconify-icon>
+                                    <iconify-icon icon="bi:pen"
+                                        class="icon"></iconify-icon>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <ul>
+                        <li><iconify-icon icon="bi:trash"
+                                class="icon"></iconify-icon> Clear
+                            Conversations</li>
+                        <li><iconify-icon icon="bi:gear"
+                                class="icon"></iconify-icon> Settings</li>
+                        <li><iconify-icon icon="bi:brightness-high"
+                                class="icon"></iconify-icon> Light Mode</li>
+                        <li><iconify-icon icon="bi:globe-americas"
+                                class="icon"></iconify-icon> English</li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <main>
+                <div class="hints">
+                    <img src="ChatGPT-Logo.png" alt="ChatGPT Logo" class="logo">
+                    <p>Enter Your Message to Start a chat. This Could Be A
+                        Question , A Statement, Or Any Other Text</p>
+                </div>
+
+                <div class="qna">
+                    <div class="result">
+                        <div class="question">
+                            <iconify-icon icon="bi:person-fill-gear"
+                                class="icon blue"></iconify-icon>
+                            <h3>What is Web Development?</h3>
+                        </div>
+
+                        <div class="answer">
+                            <iconify-icon icon="bi:robot"
+                                class="icon green"></iconify-icon>
+                            <p>It's all about developing websites using
+                                different
+                                web technologies.</p>
+                        </div>
+                    </div>
+
+                    <div class="request">
+                        <div class="input-group">
+                            <iconify-icon icon="bi:person-fill-gear"
+                                class="icon"></iconify-icon>
+                            <input type="text"
+                                placeholder="Provide a prompt"
+                                autofocus>
+                            <button id="send">Send</button>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <body>
+
+            </body>
+        </body>
+    </html>
